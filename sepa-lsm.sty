@@ -1,0 +1,252 @@
+\ProvidesFile
+	{lsm.sty}
+
+\newcommand
+	{\preletterlsm}
+	[1]
+	{%
+		\KOMAoption
+			{subject}
+			{untitled}
+		\setplength
+			{subjectaftervskip}
+			{\baselineskip}
+		\setkomavar
+			{title}
+			%{Einzugsermächtigung}
+			{SEPA-Lastschriftmandat}
+		\setkomavar
+			{subject}
+			%{Ermächtigung zum Einzug von Zahlungen mittels Lastschrift}
+			{Ermächtigung zum Einzug von Forderungen mittels Lastschrift}
+		%\setkomavar
+		%	{myref}
+		%	{LSM:???}
+		\begin{letter}{\csname #1\endcsname}
+			\setlength{\tabcolLlength}{60mm}
+			\opening{}
+			Hiermit ermächtige ich
+	%		\GlaeubigerAkkusativArtikel{}
+	%		%\textbf{\GlaeubigerAkkusativ},
+	%		\textbf{\GlaeubigerAkkusativ} dazu,
+	%%		\\*[.5\baselineskip]%
+	%%		\begin{tabular}{ >{\bfseries} c }
+	%%			\GlaeubigerAkkusativ%
+	%%			\\%
+	%%		\end{tabular}
+	%%		\\*[.5\baselineskip]%
+	%%		dazu,
+	%		unter
+	%		\GlaeubigerPossesiv{}
+	%		\\*[.5\baselineskip]%
+	%		\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+	%			Gläubiger-Identifikationsnummer%
+	%			&%
+	%			\GlaeubigerIdentifikationsnummer%
+	%			\\%
+	%		\end{tabular}
+	%		\\*[.5\baselineskip]%
+			den
+			im europäischen Zahlungsraum (SEPA)
+			mit der
+			\\*[.5\baselineskip]%
+			%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+			\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+				%Gläubiger-Identifikationsnummer%
+				Identifikationsnummer%
+				&%
+				\GlaeubigerIdentifikationsnummer%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			gekennzeichneten
+			\\*[.5\baselineskip]%
+			\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\bfseries} m{70mm} }
+				Gläubiger%
+				&%
+				\GlaeubigerAkkusativ%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			dazu,
+			Zahlungen
+			%\if
+			%	wiederkehrende Zahlungen
+			%\else
+			%	eine einmalige Zahlung
+			%\fi
+	%		von meinem Konto mit der
+	%		\\*[.5\baselineskip]%
+	%		%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+	%			IBAN%
+	%			&%
+	%			\usekomavar
+	%				{fromiban}%
+	%			\\%
+	%		\end{tabular}
+	%		\\*[.5\baselineskip]%
+			von meinem bei dem mit
+			dem
+			%der
+			\\*[.5\baselineskip]%
+			%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+			\begin{tabular}{ m{\tabcolLlength} >{\ttspaced} m{70mm} }
+				%BIC%
+				%Geschäftskennzeichen (\textbf{BIC})%
+				%internationalen Bankleitzahl (\textbf{BIC})%
+				Bankkennzeichen (\textbf{BIC})%
+				&%
+				\usekomavar
+					{frombic}%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			gekennzeichneten
+			\\*[.5\baselineskip]%
+			%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} m{70mm} }
+			%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} <{\mdseries, und zwar \KreditinstitutAkkusativArtikel} m{70mm} <{,} }
+			\begin{tabular}{ >{\bfseries} m{\tabcolLlength} m{70mm} }
+				Kreditinstitut%
+				&%
+				\KreditinstitutDativ%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			unter der
+			\\*[.5\baselineskip]%
+			%\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{70mm} }
+			\begin{tabular}{ m{\tabcolLlength} >{\ttspaced} m{70mm} }
+				%IBAN%
+				%internationalen Bankkontonummer (IBAN)%
+				%internationalen Kontonummer (\textbf{IBAN})%
+				Kontonummer (\textbf{IBAN})%
+				&%
+				\usekomavar
+					{fromiban}%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			geführten Konto
+			mittels Lastschrift
+			%einzuziehen. Zugleich weise ich
+			einzuziehen, und weise zugleich
+			das
+			kontoführende
+			%genannte
+			Kreditinstitut
+	%		kontoführende Kreditinstitut, und zwar
+	%		\KreditinstitutAkkusativArtikel{}
+	%		mit dem
+	%		\\*[.5\baselineskip]%
+	%		\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\ttspaced} m{6cm} }
+	%			BIC%
+	%			&%
+	%			\usekomavar
+	%				{frombic}%
+	%			\\%
+	%		\end{tabular}
+	%		\\*[.5\baselineskip]%
+	%		gekennzeichnete
+	%		\emph{\KreditinstitutAkkusativ}%
+			an,
+			%die von \GlaeubigerDativ{} auf mein Konto gezogenen
+			von
+			%\GlaeubigerDativ{}
+			%%dem Gläubiger auf mein Konto gezogene
+			dem genannten Gläubiger auf mein Konto gezogene
+			%%dem hiermit zum Einzug im Lastschriftverfahren ermächtigten Gläubiger auf mein Konto gezogene
+			%dem hierdurch zum Einzug von meinem Konto ermächtigten Gläubiger auf dieses gezogene
+			%%dem hierdurch zum Einzug von meinem Konto ermächtigten Gläubiger auf jenes gezogene
+			%%dem hierdurch zum Einzug von meinem Konto ermächtigten Gläubiger auf dasselbe gezogene
+			Lastschriften einzulösen.
+			%Zugleich weise ich \KreditinstitutNominativ, bei dem ich das genannte Konto führe, an, die von \GlaeubigerDativ{} auf mein Konto gezogenen Lastschriften einzulösen.
+			\newpage
+			\setlength{\tabcolLlength}{37mm}
+			Darüber hinaus bestätige ich,
+	%		%
+	%		%mein Recht in Kenntnis genommen zu haben,
+			mein Recht zur Kenntnis genommen zu haben,
+	%		meines Rechtes bewußt zu sein,
+	%		von \GlaeubigerDativ{}
+	%		%eingezogene Beträge
+	%		%auf mein Konto gezogene Lastschriften
+	%		meinem Konto mittels Lastschrift belastete Beträge
+	%		innerhalb von acht Wochen, nachdem sie meinem Konto belastet wurden,
+	%		%innerhalb von acht Wochen nach dem Belastungsdatum
+	%		zurückzufordern.
+	%		%
+	%		zur Kenntnis genommen zu haben,
+	%		dessen bewußt zu sein,
+	%		daß ich von \GlaeubigerDativ{}
+	%		%eingezogene Beträge
+	%		%auf mein Konto gezogene Lastschriften
+	%		meinem Konto mittels Lastschrift belastete Beträge
+	%		innerhalb von acht Wochen, nachdem sie meinem Konto belastet wurden,
+	%		zurückfordern
+	%		%kann.
+	%		darf.
+			%
+	%		%Dabei
+	%		Hierbei
+	%		habe ich mein Recht zur Kenntnis genommen,
+	%		%bin ich meines Rechtes bewußt,
+			%
+			%von \GlaeubigerDativ{}
+			%
+			von dem
+			\\*[.5\baselineskip]%
+			\begin{tabular}{ >{\bfseries} m{\tabcolLlength} >{\bfseries} m{70mm} }
+				Gläubiger%
+				&%
+				\GlaeubigerDativ%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			%
+	%		%eingezogene Beträge
+	%		%auf mein Konto gezogene Lastschriften
+	%		meinem Konto mittels Lastschrift belastete Beträge
+	%		%innerhalb von acht Wochen, nachdem sie meinem Konto belastet wurden,
+	%		innerhalb von acht Wochen nach dem Belastungsdatum
+	%		%innerhalb der auf deren Belastung folgenden acht Wochen
+	%		%bis zu acht Wochen nach dem Belastungsdatum
+	%		zurückzufordern,
+	%		%erstattet zu bekommen,
+			%
+			auf mein Konto gezogene Lastschriften
+			innerhalb von acht Wochen, nachdem diese eingelöst wurden,
+			%im Rahmen der
+			%unter Geltung der
+			unter den
+			%zu den
+			mit dem kontoführenden
+			\\*[.5\baselineskip]%
+			\begin{tabular}{ >{\bfseries} m{\tabcolLlength} m{70mm} }
+				Kreditinstitut%
+				&%
+				\KreditinstitutDativ%
+				\\%
+			\end{tabular}
+			\\*[.5\baselineskip]%
+			vereinbarten Bedingungen
+			zu widerrufen und
+			%die meinem Konto dadurch belasteten Beträge
+			%meinem Konto dadurch belastete Beträge
+			die dadurch von meinem Konto eingezogenen Beträge
+			%von meinem Konto eingezogene Beträge
+			zu meinen Gunsten
+			zurückzufordern.
+			%
+	%		die Erstattung von \GlaeubigerDativ{}
+	%		%eingezogener Beträge
+	%		%auf mein Konto gezogener Lastschriften
+	%		meinem Konto mittels Lastschrift belasteter Beträge
+	%		%innerhalb von acht Wochen, nachdem sie meinem Konto belastet wurden,
+	%		innerhalb von acht Wochen nach dem Belastungsdatum
+	%		%innerhalb der auf deren Belastung folgenden acht Wochen
+	%		%bis zu acht Wochen nach dem Belastungsdatum
+	%		%anzufordern.
+	%		zu verlangen.
+			\closing{}
+		\end{letter}
+	}

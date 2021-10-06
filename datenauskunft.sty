@@ -1,0 +1,199 @@
+\ProvidesFile
+	{datenauskunft.sty}
+
+\newcommand
+	{\preletterdatenauskunft}
+	[3]
+	{%
+		\begin{letter}{\csname #1\endcsname}%
+			\setkomavar
+				{title}
+				%{Art.~15~DS-GVO}
+				%{Antrag auf Auskunft über personenbezogene Daten}
+				%{Antrag auf Auskunft}
+				{Antrag auf Datenauskunft}
+			\setkomavar
+				{subject}
+				%{Auskunft über personenbezogene Daten}
+				{Auskunft über Ihnen vorliegende personenbezogene Daten zu meiner Person}
+				%{Ihnen vorliegende personenbezogene Daten zu mir}
+			\setkomavar*
+				{enclseparator}
+				{Anlage}
+			\setlength{\tabcolLlength}{31mm}
+			\setlength{\tabcolRlength}{80mm}
+			\opening{#2,}
+			bitte übermitteln Sie mir
+			%jegliche
+			%jedwede
+			sämtliche
+			gemäß
+			%
+			%Artikel~4 der Datenschutz-Grundverordnung der Europäischen~Union
+			%
+			dem vierten Artikel der Datenschutz-Grundverordnung der Europäischen~Union
+			%
+			%dem vierten Artikel der von der Europäischen~Union
+			%erlassenen
+			%%verabschiedeten
+			%Datenschutz-Grundverordnung
+			%
+			als personenbezogen geltende Daten, welche mich betreffen und
+			Ihnen
+			%Ihrem Unternehmen
+			vorliegen, und teilen Sie mir mit, wie Ihr Unternehmen diese erhoben hat und gegenüber wem
+			%diese von Ihrem Unternehmen
+			sie
+			offengelegt wurden und werden.
+			%bisher offengelegt wurden und gegenwärtig offengelegt werden.
+	%
+	%		Falls
+	%		%Ihrem Unternehmen
+	%		Ihnen
+	%		%gar
+	%		%überhaupt
+	%		keine
+	%		%mich betreffenden personenbezogenen Daten vorliegen,
+	%		personenbezogenen Daten vorliegen, welche mich betreffen,
+	%		teilen Sie mir diesen Umstand bitte mit.
+	%		%bestätigen Sie mir bitte
+
+			Sollten Sie meinem Antrag nicht innerhalb eines Monats nach
+			%dessen Eingang bei Ihnen
+			Erhalt
+			nachkommen können, nennen Sie mir bitte eine angemessene
+			%Frist, bis zu der Sie ihn bearbeiten werden.
+			Frist für dessen Bearbeitung.
+			%Frist für dessen abschließende Bearbeitung
+			%Frist für den Abschluss ...
+
+	%		Bitte stellen Sie mir die hiermit angeforderte Auskunft im Format PDF/A oder in einem anderen gängigen elektronischen Format zur Verfügung.
+			Bitte stellen Sie mir die hiermit angeforderte Auskunft im
+			\begin{tabbed}{ m{\tabcolLlength} >{\ttspaced} m{\tabcolRlength} }
+				Format%
+				&%
+				PDF/A%
+				\\%
+			\end{tabbed}
+			oder in einem anderen gängigen elektronischen Format zur Verfügung.
+	%		Hierfür dürfen Sie mir die entsprechenden Dateien gerne per E-Mail zusenden, und zwar an folgende Adresse:
+	%		\begin{tabbed}{ >{\ttspaced} l }
+	%			david\,@\,djsp.eu%
+	%			\\%
+	%		\end{tabbed}
+			Hierfür dürfen Sie mir die entsprechenden Dateien gerne an meine
+			\begin{tabbed}{ m{\tabcolLlength} >{\ttspaced} m{\tabcolRlength} }
+				E-Mail Adresse%
+				&%
+				{%
+					\usekomavar[\def\tempfromemail]{fromemail}%
+					\href{mailto:\tempfromemail}{\tempfromemail}%
+				}%
+				\\%
+			\end{tabbed}
+			zusenden.
+			Ich bestätige, daß
+			%ich diese E-Mail Adresse besitze
+			diese
+			%ausschließlich
+			mir gehört
+			und nur ich auf in dem dazugehörigen elektronischen Postfach gespeicherte Nachrichten und deren Anlagen zugreifen kann.
+			\newpage
+			\setlength{\tabcolLlength}{24mm}
+			Wenn Sie mir die hiermit angeforderte Auskunft stattdessen oder zusätzlich in Papierform bereitstellen, senden Sie diese
+			%nach Möglichkeit
+			bitte
+			%nicht an meine Wohnadresse, sondern
+			an
+	%		folgendes bei der Deutschen Post angemietetes Postfach:
+	%
+	%		\vskip 2\parskip%
+	%		\relax%
+	%		\hbox%
+	%			{%
+	%				\hskip 6mm%
+	%				\relax%
+	%				\vbox%
+	%					{%
+	%						\ttfamily%
+	%						\hbox%
+	%							{%
+	%								Postfach~\Postfachnummer%
+	%							}%
+	%						\hbox%
+	%							{%
+	%								\PostfachPostleitzahl~\PostfachOrt%
+	%							}%
+	%					}%
+	%			}%
+	%		\vskip\parskip%
+	%		\relax%
+			mein im
+			\begin{tabbed}{ m{\tabcolLlength} m{\tabcolRlength} }
+				Postort%
+				&%
+				\@PostfachOrt%
+				\\%
+			\end{tabbed}
+			mit der
+			\begin{tabbed}{ m{\tabcolLlength} >{\ttspaced} m{\tabcolRlength} }
+				Postleitzahl%
+				&%
+				\@PostfachPostleitzahl%
+				\\%
+			\end{tabbed}
+			%bei der Deutschen~Post
+			unter der
+			\begin{tabbed}{ m{\tabcolLlength} >{\ttspaced} m{\tabcolRlength} }
+				Nummer%
+				&%
+				\@Postfachnummer%
+				\\%
+			\end{tabbed}
+			%bei der Deutschen~Post
+			angemietetes Postfach.
+			%Ich bestätige, daß ich dieses Postfach derzeit anmiete und in absehbarer Zukunft weiterhin anmieten werde, und daß niemand anderes als ich auf in dieses Postfach eingelegte Sendungen zugreifen kann.
+			% below: Rechtfertigung - erstmal ~darum bitten~ dazu anweisen, dann -auf Forderung- bestreiten...
+	%		Ich bestätige und kann nachweisen, daß ich dieses Postfach derzeit
+	%		%anmiete.
+	%		%Ferner versichere ich Ihnen nach bestem Wissen und Gewissen, daß niemand anderes als ich auf darin eingelegte Sendungen zugreifen kann.
+	%		anmiete, und
+	%		%übernehme die Haftung für
+	%		%abhandengekommene
+	%		%%in Verlust geratene
+	%		%Sendungen.
+	%		hafte für jeden durch den Versand  entstandenen Schaden.
+
+			%Wenn Sie bezweifeln, daß David~Joaquín Shourabi~Porcel Ihnen diesen Antrag stellt, die genannte E-Mail Adresse besitzt oder das angegebene Postfach anmietet, dürfen Sie gerne zur Bestätigung meiner Identität, meiner E-Mail Adresse oder meiner Postfachanschrift erforderliche Informationen von mir anfordern.
+			%Bei Bedarf stelle Ihnen zur Bestätigung meiner Identität, meiner E-Mail Adresse oder meiner Postanschrift erforderliche Unterlagen bereit.
+			%Sollten meine Identität oder meine Postanschrift bestätigt werden müssen, 
+			%Sollte die Bearbeitung dieses Antrages weitere Informationen von mir erfordern
+			%Sollte die Bearbeitung dieses Antrages der Bestätigung meiner Identität bedürfen
+			%Sollten begründete Zweifel an meiner Identität oder Postanschrift bestehen, stelle ich Ihnen für deren Bestätigung erforderliche Informationen und Unterlagen gerne bereit.
+			%Hierfür
+	%		Zur Bestätigung meiner Identität
+	%		stelle ich Ihnen einstweilen folgende Informationen
+	%		zu meiner Person
+	%		%zur Verfügung%
+	%		bereit%
+	%		:
+			Zur schnelleren Bearbeitung meines Antrages sende ich Ihnen einstweilen einige Informationen zu meiner Person zu.
+	%		%Sollten Sie
+	%		%%hierfür
+	%		%weitere Informationen oder etwa Unterlagen von mir benötigen, teilen Sie mir bitte mit,
+	%		%%welche und warum%
+	%		%aus welchen Gründen Sie welche 
+	%		%.
+	%		%Sollten noch Zweifel an meiner Identität bestehen,
+	%		Sollten Sie meine Identität dennoch bezweifeln,
+	%		teilen Sie mir bitte mit,
+	%		%welche Informationen oder Unterlagen Sie aus welchen Gründen benötigen.
+	%		welche zusätzlichen Informationen oder Unterlagen deren Bestätigung aus welchen Gründen erfordert.
+	%		%stelle ich Ihnen diese auf Anfrage bereit.
+	%%		Ich stelle sie Ihnen dann auf Ihrem bevorzugten Weg zur Verfügung.
+	%%			Überdies sende ich Ihnen anbei eine Kopie meines Reisepasses.
+			Sollte dennoch Zweifel an meiner Identität bestehen, teilen Sie mir bitte mit, welche zusätzlichen Unterlagen deren Bestätigung aus welchen Gründen erfordert.
+			\closing{#3}
+			\encl{Zusätzliche Informationen zu meiner Person zur Bestätigung meiner Identität}
+		\end{letter}%
+	}
